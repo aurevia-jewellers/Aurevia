@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVIA</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <!-- <nAV class="navbar"> 
+        <div class="logo">A shop</div>
+        <ul class="nav-links">
+            <li><a  href="#">home</a>></a></li>
+             <li><a  href="#">shop</a>></a></li>
+              <li><a  href="#">product</a>></a></li>
+              <li><a  href="#">About us</a>></a></li>
+              <li><a  href="#">contact</a>></a></li> -->
+              <nav class="navbar"> 
+    <div class="logo">A shop</div>
+    <ul class="nav-links">
+        <li><a href="#Home">Home</a></li>
+         <li><a href="#product">Product</a></li> 
+        <li><a href="#about">About us</a></li> 
+        <li><a href="#contact">Contact</a></li> </ul>
+</nav>
+
+        </ul>
+    </nAV>
+    <header class="hero" id="Home"> 
+        <h1>Aurevia Silver Collection</h1>
+        <p>Upgrade your style with our latest arrivals.</p>
+        <button class="cta-button">Shop Now</button>
+    </header>
+
+    <!-- <section class="products-container" id="product">
+    <h2>Feature product</h2>
+
+    <div class="product-grid"> -->
+          
+    
+        <!-- <div class="product-card">
+            <div class="image-container">
+            <img src="../4K Stone, Black Velv.jpeg" alt="silver ring" width="150" >
+            </div>
+            <h3>silver ring</h3>
+                <p class="price">$49.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+        </div>
+         
+
+        <div class="product-card">
+            <div class="image-container">
+            <img src="./Earring Edit.jpeg" alt="silver Earring" width="200">
+            </div>
+            <h3>silver Earring</h3>
+                <p class="price">$49.99</p>
+                  <button class="add-to-cart">Add to Cart</button>
+               
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+            <img src="./Professional Jewelry.jpeg" alt="gold chain" width="200">
+            </div>
+            <h3>gold chain</h3>
+                <p class="price">$49.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+               
+        </div>
+    </div>
+
+    </section> -->
+    
+     <!-- About Section -->
+    <section id="about">
+        <h2>Our Story</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="aurevia logo.png" alt="About M-Shop">
+            </div>
+            <div class="about-text">
+                <h3>Aurevia was born from a simple belief — jewellery is not just an accessory, it is expression.</h3>
+                <p>We created Aurevia to celebrate modern elegance through finely crafted silver jewellery designed for confident, bold, and graceful individuals. Every piece reflects precision, premium finishing, and timeless style.</p>
+                <p>At Aurevia, we focus on:
+
+• Modern yet minimal designs
+• High-quality silver craftsmanship
+• Premium finishing and detailing
+• Jewellery that feels luxurious yet wearable every day</p>
+                <p>Our journey started with a vision to bring international-level aesthetics into contemporary silver jewellery. We wanted designs that shine in simplicity, speak through detail, and elevate everyday style effortlessly.
+
+Aurevia is not just a brand — it is a statement of refinement, confidence, and individuality.
+
+When you wear Aurevia, you don’t just wear jewellery.
+You wear confidence. You wear elegance. You wear identity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> aurevia94@gmail.com</p>
+                <p><strong>Phone:</strong> 9817492274</p>
+                <p><strong>Address:</strong> bhairahawa</p>
+                <p><strong>Hours:</strong> Mon - Fri, 10am - 6pm EST</p>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.');">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 A-Shop. All rights reserved. Designed for the future of fashion.</p>
+    </footer>
+
+    <script>
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Mock cart logic
+        const cartButtons = document.querySelectorAll('.add-to-cart');
+        let cartCount = 0;
+        const cartDisplay = document.querySelector('.nav-links li:last-child a');
+
+        cartButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                cartCount++;
+                cartDisplay.textContent = `Cart (${cartCount})`;
+                btn.textContent = "Added!";
+                btn.style.backgroundColor = "#10b981";
+                
+                setTimeout(() => {
+                    btn.textContent = "Add to Cart";
+                    btn.style.backgroundColor = "";
+                }, 1500);
+            });
+        });
+          </script>
+</body>
+</html>
